@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "hexlet-code"
+version = "0.1.0"
+description = "Training Project 2"
+authors = ["Kirill Chistov <kirill.v.chistov@yandex.ru>"]
+readme = "README.md"
+packages = [{include = "gendiff"}]
+
+[tool.poetry.scripts]
+gendiff = "gendiff.scripts.gendiff:main"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+# argparse = "^1.4.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
