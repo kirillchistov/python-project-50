@@ -1,5 +1,7 @@
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/kirillchistov/python-project-50/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/kirillchistov/python-project-50/actions)
+[![Maintainability](https://api.codeclimate.com/v1/badges/89fb74bf24d683a10a5a/maintainability)](https://codeclimate.com/github/kirillchistov/python-project-50/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/89fb74bf24d683a10a5a/test_coverage)](https://codeclimate.com/github/kirillchistov/python-project-50/test_coverage)
 
 ## Gendiff Difference Calculator
 ## Step 3:
