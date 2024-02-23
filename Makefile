@@ -19,6 +19,9 @@ gendiff:
 diff:
 	poetry run gendiff gendiff/files/file1.json gendiff/files/file2.json
 
+package-install-force: 
+	python3 -m pip install --force-reinstall --user dist/*.whl
+
 selfcheck:
 	poetry check
 
