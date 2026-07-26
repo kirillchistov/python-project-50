@@ -1,24 +1,26 @@
 #!/usr/bin/env python3
-from gendiff import generate_diff
 import argparse
 
+from gendiff import generate_diff
 
-PROG = 'Gendiff CLI utility'
+
+PROG = 'gendiff'
 DESCRIPTION = 'Compares two configuration files and shows a difference.'
-EPILOG = 'Thanks for checking in.'
 
-parser = argparse.ArgumentParser(
-    prog=PROG,
-    description=DESCRIPTION,
-    epilog=EPILOG)
-parser.add_argument('first_file', type=str)
-parser.add_argument('second_file', type=str)
-parser.add_argument('-f', '--format', help='set format of output')
-args = parser.parse_args()
+
+def parse_args():
+    parser = argparse.ArgumentParser(
+        prog=PROG,
+        description=DESCRIPTION,
+    )
+    parser.add_argument('first_file')
+    parser.add_argument('second_file')
+    parser.add_argument('-f', '--format', help='set format of output')
+    return parser.parse_args()
 
 
 def main():
-    print(args.first_file, args.second_file)
+    args = parse_args()
     print(generate_diff(args.first_file, args.second_file))
 
 
