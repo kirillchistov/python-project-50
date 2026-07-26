@@ -38,12 +38,12 @@ print(diff)
 ```
 
 ## Демонстрация:
-[![asciicast](https://asciinema.org/a/1m2y36pYZgPeZui9)](https://asciinema.org/a/1m2y36pYZgPeZui9)
+[![asciicast](https://asciinema.org/a/3DlY2swpPq8uPGE3)](https://asciinema.org/a/3DlY2swpPq8uPGE3)
 
 ## Шаг 5:
 - [x] Реализуйте возможность использования пакета как библиотеки.
 - [x] Реализуйте поиск различий между двумя плоскими (только пары ключ-значение) json-файлами. Вывод должен быть таким, как показано сверху
-- [x] Добавьте в ридми [аскинему с примером работы пакета](https://asciinema.org/a/1m2y36pYZgPeZui9)
+- [x] Добавьте в ридми [аскинему с примером работы пакета](https://asciinema.org/a/3DlY2swpPq8uPGE3)
 
 ## Шаг 4:
 - [x] Создайте файлы на основе данных приведенных выше
