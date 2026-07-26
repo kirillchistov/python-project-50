@@ -5,6 +5,7 @@ dist/
 .venv/
 .coverage
 coverage.xml
+htmlcov/
 welcome.py
 .pytest_cache/
 *.cast

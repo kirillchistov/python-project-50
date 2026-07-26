@@ -13,18 +13,24 @@ package-install:
 lint:
 	poetry run flake8 gendiff
 
+test:
+	poetry run pytest
+
+test-coverage:
+	poetry run pytest --cov=gendiff --cov-report=xml
+
 gendiff:
 	poetry run gendiff
 
 diff:
 	poetry run gendiff gendiff/files/file1.json gendiff/files/file2.json
 
-package-install-force: 
+package-install-force:
 	python3 -m pip install --force-reinstall --user dist/*.whl
 
 selfcheck:
 	poetry check
 
-check: selfcheck lint
+check: selfcheck test lint
 
-.PHONY: install lint selfcheck check build
+.PHONY: install lint test test-coverage selfcheck check build
