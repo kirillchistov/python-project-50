@@ -25,6 +25,9 @@ gendiff:
 diff:
 	poetry run gendiff gendiff/files/file1.json gendiff/files/file2.json
 
+diff-yaml:
+	poetry run gendiff gendiff/files/file1.yml gendiff/files/file2.yml
+
 package-install-force:
 	python3 -m pip install --force-reinstall --user dist/*.whl
 
