@@ -4,6 +4,8 @@
 [![Test Coverage](https://api.codeclimate.com/v1/badges/89fb74bf24d683a10a5a/test_coverage)](https://codeclimate.com/github/kirillchistov/python-project-50/test_coverage)
 ![Github Actions](https://github.com/kirillchistov/python-project-50/actions/workflows/pyci.yml/badge.svg)
 
+[![Quality gate status](https://sonarcloud.io/api/project_badges/measure?project=kirillchistov_python-project-50&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=kirillchistov_python-project-50)
+
 ## Gendiff Difference Calculator «Вычислитель отличий»
 — Это программа, которая определяет разницу между двумя структурами данных. Это популярная задача, для которой существуют онлайн-сервисы вроде jsondiff; похожий механизм используется при выводе тестов и при отслеживании изменений в конфигурационных файлах.
 
