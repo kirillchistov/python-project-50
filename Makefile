@@ -28,6 +28,9 @@ diff:
 diff-yaml:
 	poetry run gendiff gendiff/files/file1.yml gendiff/files/file2.yml
 
+diff-nested:
+	poetry run gendiff gendiff/files/nested1.json gendiff/files/nested2.json
+
 package-install-force:
 	python3 -m pip install --force-reinstall --user dist/*.whl
 
