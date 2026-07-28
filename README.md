@@ -53,12 +53,12 @@ Plain:
 [ASCIINEMA](https://asciinema.org/a/9MgPkJyL7LR4qlcG)
 
 JSON:
-[![asciicast](https://asciinema.org/a/JSON_ASCIINEMA_ID.svg)](https://asciinema.org/a/JSON_ASCIINEMA_ID)
+[ASCIINEMA Cast file](https://github.com/kirillchistov/python-project-50/blob/main/gendiff-json.cast)
 
 ## Шаг 10:
 - [x] Напишите тесты
 - [x] Реализуйте форматер json. Также добавьте его в опции как и остальные форматеры.
-- [ ] Добавьте в README.md аскинему с примером работы
+- [x] Добавьте в README.md аскинему с примером работы
 
 ## Шаг 9:
 - [x] Напишите тесты
