@@ -34,6 +34,9 @@ diff-nested:
 diff-plain:
 	poetry run gendiff --format plain gendiff/files/nested1.json gendiff/files/nested2.json
 
+diff-json:
+	poetry run gendiff --format json gendiff/files/nested1.json gendiff/files/nested2.json
+
 package-install-force:
 	python3 -m pip install --force-reinstall --user dist/*.whl
 

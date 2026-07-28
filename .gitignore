@@ -8,5 +8,5 @@ coverage.xml
 htmlcov/
 welcome.py
 .pytest_cache/
-*.cast
+# *.cast
 .DS_Store

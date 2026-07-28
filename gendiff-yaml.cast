@@ -1,0 +1,11 @@
+{"version":3,"term":{"cols":75,"rows":33,"type":"xterm-256color","version":"xterm.js(6.1.0-beta.256)","theme":{"fg":"#f0f0f0","bg":"#141414","palette":"#242424:#fc6b83:#3fa266:#d2943e:#81a1c1:#b48ead:#88c0d0:#f0f0f0:#f0f0f0:#fc6b83:#70b489:#f1b467:#87a6c4:#b48ead:#88c0d0:#ffffff"}},"timestamp":1785142801,"env":{"SHELL":"/bin/zsh"}}
+[0.062, "o", "/Users/kirillchistov/yandex-cloud/completion.zsh.inc:118: command not found: compdef\r\n"]
+[0.001, "o", "\u001b[1m\u001b[7m%\u001b[27m\u001b[1m\u001b[0m                                                                          \r \r"]
+[0.000, "o", "\r\u001b[0m\u001b[27m\u001b[24m\u001b[Jkirillchistov@MacBook-Pro-Admin-2 python-project-50 % \u001b[K\u001b[?2004h"]
+[1.302, "o", "\u001b[7mgendiff gendiff/files\u001b[7m/\u001b[7mfile1.yml gendiff/files/file2.yml\u001b[27m\u001b[K"]
+[1.371, "o", "\u001b[A\u001b[20C\u001b[27mg\u001b[27me\u001b[27mn\u001b[27md\u001b[27mi\u001b[27mf\u001b[27mf\u001b[27m \u001b[27mg\u001b[27me\u001b[27mn\u001b[27md\u001b[27mi\u001b[27mf\u001b[27mf\u001b[27m/\u001b[27mf\u001b[27mi\u001b[27ml\u001b[27me\u001b[27ms/\u001b[27mf\u001b[27mi\u001b[27ml\u001b[27me\u001b[27m1\u001b[27m.\u001b[27my\u001b[27mm\u001b[27ml\u001b[27m \u001b[27mg\u001b[27me\u001b[27mn\u001b[27md\u001b[27mi\u001b[27mf\u001b[27mf\u001b[27m/\u001b[27mf\u001b[27mi\u001b[27ml\u001b[27me\u001b[27ms\u001b[27m/\u001b[27mf\u001b[27mi\u001b[27ml\u001b[27me\u001b[27m2\u001b[27m.\u001b[27my\u001b[27mm\u001b[27ml\u001b[?2004l\r\r\n"]
+[0.086, "o", "{\r\n  - follow: false\r\n    host: hexlet.io\r\n  - proxy: 123.234.53.22\r\n  - timeout: 50\r\n  + timeout: 20\r\n  + verbose: true\r\n}\r\n"]
+[0.003, "o", "\u001b[1m\u001b[7m%\u001b[27m\u001b[1m\u001b[0m                                                                          \r \r"]
+[0.000, "o", "\r\u001b[0m\u001b[27m\u001b[24m\u001b[Jkirillchistov@MacBook-Pro-Admin-2 python-project-50 % \u001b[K\u001b[?2004h"]
+[3.021, "o", "\u001b[?2004l\r\r\n"]
+[0.006, "x", "0"]
