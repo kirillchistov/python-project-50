@@ -49,6 +49,22 @@ YAML:
 Nested (stylish):
 [ASCIINEMA](https://asciinema.org/a/rSmMGERO0aOGBABT)
 
+Plain:
+[ASCIINEMA](https://asciinema.org/a/9MgPkJyL7LR4qlcG)
+
+## Шаг 9:
+- [x] Напишите тесты
+- [x] Реализуйте форматер 'plain'
+- [x] Реализуйте возможность выбора формата plain. Функция сравнения должна иметь параметр, который выбирает вид представления результата
+``` python
+from gendiff import generate_diff
+
+diff = generate_diff(file_path1, file_path2, 'plain')
+print(diff)
+```
+- [x] Вынесите функции форматирования в отдельный пакет так, чтобы каждая функция, которая формирует конкретное представление, располагалась в своем модуле
+- [x] Добавьте в README.md [аскинему с примером работы](https://asciinema.org/a/9MgPkJyL7LR4qlcG)
+
 ## Шаг 8:
 - [x] Напишите тесты
 - [x] Сделайте тестовый файл yaml со вложенностью, по аналогии с описанным выше json

@@ -57,3 +57,21 @@ def test_generate_diff_default_formatter_is_stylish():
 
     assert generate_diff(file1, file2) == expected
     assert generate_diff(file1, file2, 'stylish') == expected
+
+
+@pytest.mark.parametrize(
+    ('file1_name', 'file2_name'),
+    [
+        ('nested1.json', 'nested2.json'),
+        ('nested1.yml', 'nested2.yml'),
+        ('nested1.json', 'nested2.yml'),
+        ('nested1.yml', 'nested2.json'),
+    ],
+)
+def test_generate_diff_plain(file1_name, file2_name):
+    file1 = get_test_data_path(file1_name)
+    file2 = get_test_data_path(file2_name)
+    expected = read_file('result_plain.txt').rstrip('\n')
+    actual = generate_diff(file1, file2, 'plain')
+
+    assert actual == expected
