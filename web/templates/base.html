@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}DSA Lab{% endblock %}</title>
+  <link rel="stylesheet" href="{{ base }}/static/css/app.css">
+</head>
+<body>
+  <header class="top">
+    <a class="brand" href="{{ base }}/">
+      <span class="brand-mark">DSA</span>
+      Учебный кабинет · компаньон gendiff
+    </a>
+    <nav class="top-nav">
+      {% for item in lessons %}
+        <a href="{{ base }}/lessons/{{ item.slug }}" {% if lesson is defined and lesson.slug == item.slug %}aria-current="page"{% endif %}>{{ loop.index }}</a>
+      {% endfor %}
+    </nav>
+  </header>
+  <main>
+    {% block content %}{% endblock %}
+  </main>
+  <footer class="foot">
+    CLI gendiff не изменён. Здесь разбираем те же идеи на шагах и картинках.
+  </footer>
+  <script>
+    window.DSA_BASE = {{ base|tojson }};
+    window.DSA_STATIC = {{ dsa_static|tojson }};
+  </script>
+  <script src="{{ base }}/static/js/viz.js"></script>
+  <script src="{{ base }}/static/js/player.js"></script>
+  <script src="{{ base }}/static/js/tracers.js"></script>
+  <script src="{{ base }}/static/js/app.js"></script>
+</body>
+</html>
