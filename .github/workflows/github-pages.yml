@@ -4,11 +4,12 @@ on:
   push:
     branches:
       - main
+      - dev
       - master
   workflow_dispatch:
     inputs:
       base_path:
-        description: 'Префикс URL. Пусто — взять из имени репозитория. / — корень домена (custom domain или username.github.io).'
+        description: 'Динамическое программирование.'
         required: false
         default: ''
 
