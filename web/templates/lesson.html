@@ -1,0 +1,95 @@
+{% extends "base.html" %}
+{% block title %}{{ lesson.title }} · DSA Lab{% endblock %}
+{% block content %}
+<article class="lesson">
+  <p class="eyebrow">{{ lesson.kicker }}</p>
+  <h1>{{ lesson.title }}</h1>
+
+  <aside class="callout analogy">
+    <h2>{{ lesson.analogy.title }}</h2>
+    <p>{{ lesson.analogy.text }}</p>
+  </aside>
+
+  <section>
+    <h2>Зачем это middle-разработчику</h2>
+    <p>{{ lesson.why }}</p>
+  </section>
+
+  <aside class="callout {% if lesson.gendiff.applies %}yes{% else %}no{% endif %}">
+    <h2>{% if lesson.gendiff.applies %}В gendiff{% else %}В gendiff этого нет{% endif %}</h2>
+    <p>{{ lesson.gendiff.text }}</p>
+  </aside>
+
+  {% for block in lesson.theory %}
+    <section>
+      <h2>{{ block.heading }}</h2>
+      <p>{{ block.body }}</p>
+    </section>
+  {% endfor %}
+
+  {% for pg in lesson.playgrounds %}
+    <section class="playground" data-playground data-algorithm="{{ pg.algorithm }}" id="{{ pg.id }}">
+      <h2>{{ pg.title }}</h2>
+      {% if pg.hint %}<p class="muted">{{ pg.hint }}</p>{% endif %}
+      <div class="controls">
+        {% for field in pg.fields %}
+          <label>
+            {{ field.label }}
+            {% if field.type == 'textarea' %}
+              <textarea data-field="{{ field.name }}" {% if field.json %}data-json="1"{% endif %} rows="10">{{ field.value }}</textarea>
+            {% elif field.type == 'range' %}
+              <input type="range" data-field="{{ field.name }}" min="{{ field.min }}" max="{{ field.max }}" value="{{ field.value }}">
+            {% elif field.type == 'number' %}
+              <input type="number" data-field="{{ field.name }}" value="{{ field.value }}">
+            {% else %}
+              <input type="text" data-field="{{ field.name }}" value="{{ field.value }}">
+            {% endif %}
+          </label>
+        {% endfor %}
+        <button type="button" class="primary" data-run>Запустить</button>
+      </div>
+      <div class="player-bar">
+        <button type="button" data-prev>Шаг назад</button>
+        <button type="button" data-play>Play</button>
+        <button type="button" data-pause>Pause</button>
+        <button type="button" data-next>Шаг вперёд</button>
+        <span class="counter" data-step-counter>0 / 0</span>
+      </div>
+      <p class="step-msg" data-step-msg>Нажмите «Запустить», чтобы увидеть шаги.</p>
+      <p class="error" data-error hidden></p>
+      <div class="viz" data-viz></div>
+    </section>
+  {% endfor %}
+
+  <section>
+    <h2>Памятка Big O</h2>
+    <table class="memo">
+      <thead>
+        <tr><th>Операция</th><th>Время</th><th>Память</th></tr>
+      </thead>
+      <tbody>
+        {% for row in lesson.complexity %}
+          <tr>
+            <td>{{ row.op }}</td>
+            <td><code>{{ row.time }}</code></td>
+            <td><code>{{ row.memory }}</code></td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </section>
+
+  <section class="quiz" data-quiz>
+    <h2>Проверьте себя</h2>
+    {% for item in lesson.quiz %}
+      <div class="question" data-question data-answer="{{ item.answer }}">
+        <p>{{ item.q }}</p>
+        {% for option in item.options %}
+          <button type="button" data-option="{{ loop.index0 }}">{{ option }}</button>
+        {% endfor %}
+        <p class="explain" hidden>{{ item.explain }}</p>
+      </div>
+    {% endfor %}
+  </section>
+</article>
+{% endblock %}

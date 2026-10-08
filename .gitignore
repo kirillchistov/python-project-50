@@ -10,3 +10,4 @@ welcome.py
 .pytest_cache/
 # *.cast
 .DS_Store
+site/

@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %}DSA Lab · компаньон gendiff{% endblock %}
+{% block content %}
+<section class="hero">
+  <p class="eyebrow">Для middle, который пока обходил стороной алгоритмы</p>
+  <h1>Алгоритмы и структуры данных на примере вычислителя отличий</h1>
+  <p class="lead">
+    Сложные темы разложены на жизненные аналогии и пошаговые картинки.
+    Где идея реально живёт в <code>gendiff</code> — показываем код.
+    Где нет — честно говорим об этом и разбираем, зачем тема нужна в бою.
+  </p>
+</section>
+<section class="grid">
+  {% for item in lessons %}
+    <a class="card" href="{{ base }}/lessons/{{ item.slug }}">
+      <span class="kicker">{{ item.kicker }}</span>
+      <h2>{{ item.title }}</h2>
+      <p>{{ item.card }}</p>
+    </a>
+  {% endfor %}
+</section>
+{% endblock %}

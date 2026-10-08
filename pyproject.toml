@@ -4,7 +4,7 @@ version = "0.1.0"
 description = "Training Project 2"
 authors = ["Kirill Chistov <kirill.v.chistov@yandex.ru>"]
 readme = "README.md"
-packages = [{include = "gendiff"}]
+packages = [{include = "gendiff"}, {include = "dsa_lab"}]
 
 [tool.poetry.scripts]
 gendiff = "gendiff.scripts.gendiff:main"
@@ -13,6 +13,9 @@ gendiff = "gendiff.scripts.gendiff:main"
 python = "^3.9"
 # argparse = "^1.4.0"
 pyyaml = "^6.0.3"
+fastapi = "^0.115.0"
+uvicorn = {extras = ["standard"], version = "^0.32.0"}
+jinja2 = "^3.1.4"
 
 
 [build-system]

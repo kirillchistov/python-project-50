@@ -45,4 +45,16 @@ selfcheck:
 
 check: selfcheck test lint
 
-.PHONY: install lint test test-coverage selfcheck check build
+dsa-lab:
+	poetry run uvicorn dsa_lab.app:app --reload --host 127.0.0.1 --port 8000
+
+dsa-lint:
+	poetry run flake8 dsa_lab tests/test_dsa_lab.py
+
+dsa-pages:
+	poetry run python -m dsa_lab.export_static --out site
+
+dsa-pages-preview: dsa-pages
+	python3 -m http.server 8080 --directory site
+
+.PHONY: install lint test test-coverage selfcheck check build dsa-lab dsa-lint dsa-pages dsa-pages-preview
